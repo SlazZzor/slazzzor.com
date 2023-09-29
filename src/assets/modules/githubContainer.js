@@ -12,7 +12,9 @@ function GithubContainer() {
                 setProfileInfo(jsonResult);
                 console.log(jsonResult)
             }))
-    }, [])
+    }, []);
+
+
     return (
         <div className="gitContainer">
             <img src={githubLogo} alt="git logo" height={75}></img>
