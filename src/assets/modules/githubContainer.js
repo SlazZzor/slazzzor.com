@@ -2,6 +2,8 @@ import '../../App.css';
 import {useEffect, useState} from "react";
 import githubLogo from "../logos/githubLogo.png"
 import blankPfp from "../logos/blankPfp.png"
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 
 
 function GithubContainer() {
@@ -56,12 +58,12 @@ function GithubContainer() {
         <div className="gitWidgetContainer">
             <div className="gitWidgetLogoContainer">
                 <div>
-                    <img src={githubLogo} alt="git logo" height={50} width={50} loading="lazy"></img>
+                    <img src={githubLogo} alt="git logo" height={50} width={50}></img>
                 </div>
                 <a className="gitText" href="https://github.com/SlazZzor" target="_blank" rel="noopener noreferrer"> SlazZzor </a>
-                    <img src={isProfileLoaded ? profileInfo["avatar_url"] : blankPfp} alt="git pfp" className="gitImg" height={50} width={50} loading="lazy"></img>    
+                    <img src={isProfileLoaded ? profileInfo["avatar_url"] : blankPfp} alt="git pfp" className="gitImg" height={50} width={50}></img>    
                 </div>
-            {renderRepos()}
+            {isProfileLoaded ? renderRepos() : <Skeleton count={5} style={{display: "flex", flex: 2}}/>}
         </div> 
     );
 };
