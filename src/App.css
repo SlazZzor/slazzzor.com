@@ -1,12 +1,7 @@
 .container {
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-
-.logoContainer {
-    background-color: black;
 }
 
 .loading {
@@ -16,10 +11,41 @@
     transform: translate(-50%, -50%);
 }
 
-.gitContainer {
+.profilesContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.git {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-width: 10px; 
+    border-style: dashed; 
+    padding-left: 15px; 
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-color: rgb(158, 97, 214);
+}
+
+.gitLogosContainer {
     display: flex;
     gap: 10px;
     align-items: center;
+    justify-content: center;
+}
+
+.gitLogosContainer div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.gitReposContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 .gitImg {
@@ -27,7 +53,37 @@
 }
 
 .gitText {
-    font-size: 15px;
+    font-size: 17px;
     color: black;
     text-decoration: none;
+}
+
+.gitTextContainer {
+    display: flex;
+    font-size: 13px;
+    color: purple;
+}   
+
+.gitRepoContainer {
+    display: flex;
+    gap: 5px;
+}
+
+.gitRepoContainer div{
+    width: 175px;
+}
+
+.gitRepoText {
+    text-decoration: none; 
+    color: rgba(52, 34, 24, 0.853);
+}
+
+.gitInfoContainer {
+    display: flex;
+    align-items: flex-end;
+    gap: 3px;
+    font-size: 13px;
+    text-decoration: none; 
+    font-weight: bold;
+    color: black;
 }
