@@ -11,7 +11,7 @@ function GithubContainer() {
 
     function renderRepos(){
         if (reposInfo) {
-            return reposInfo.sort((a, b) => (Date.parse(b["pushed_at"]) - Date.parse(a["pushed_at"]))).map((value, index) => 
+            return reposInfo.sort((a, b) => (Date.parse(b["pushed_at"]) - Date.parse(a["pushed_at"]))).slice(0, 5).map((value, index) => 
                 (
                     <div className="gitRepoContainer" key={index}>
                         <div className="gitTextContainer">
