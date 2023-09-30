@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import "./App.css";
 import blueLogoGif from "./assets/logos/blueSlazzzor.com.gif";
 import Loading from "./assets/modules/loading";
@@ -17,14 +17,9 @@ function App() {
     };
   }, []);
 
-  if (!isLoaded) {
-    return (
-      <Loading /> 
-    )
-  };
-
 
   return (
+    <Suspense fallback={<Loading />}>
       <div className="container">
         <div>
           <img src={blueLogoGif} alt="slazzzor.com" />
@@ -33,6 +28,8 @@ function App() {
           <GithubContainer />
         </div>
       </div>
+    </Suspense>
+      
   );
 }
 
