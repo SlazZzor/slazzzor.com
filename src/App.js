@@ -3,6 +3,7 @@ import "./App.css";
 import blueLogoGif from "./assets/logos/blueSlazzzor.com.gif";
 import Loading from "./assets/modules/loading";
 import GithubContainer from "./assets/modules/githubContainer";
+import LinkedInContainer from "./assets/modules/linkedInContainer";
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         </div> 
         <div className="profilesContainer">
           <GithubContainer />
+          <LinkedInContainer />
         </div>
       </div>
     </Suspense>

@@ -17,6 +17,20 @@
     gap: 5px;
 }
 
+.linkedInWidgetContainer {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 200px;
+    border-width: 10px; 
+    border-style: dashed; 
+    padding-left: 15px; 
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-right: 15px;
+    border-color: lightskyblue;
+}
+
 .gitWidgetContainer {
     display: flex;
     flex-direction: column;
