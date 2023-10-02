@@ -50,7 +50,6 @@ function GithubContainer() {
             .then(result => result.json()
             .then(jsonResult => {
                 setReposInfo(jsonResult);
-                console.log(jsonResult)
             }))
     }, []);
 
