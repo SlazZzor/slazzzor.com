@@ -1,9 +1,9 @@
 import React, { Suspense } from "react";
 import "./App.css";
 import blueLogoGif from "./assets/logos/blueSlazzzor.com.gif";
-import Loading from "./assets/modules/loading";
-import GithubContainer from "./assets/modules/githubContainer";
-import LinkedInContainer from "./assets/modules/linkedInContainer";
+import Loading from "./components/loading";
+import GithubContainer from "./components/githubContainer";
+import LinkedInContainer from "./components/linkedInContainer";
 
 
 function App() {

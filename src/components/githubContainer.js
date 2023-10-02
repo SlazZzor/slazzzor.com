@@ -1,7 +1,7 @@
-import '../../App.css';
+import '../App.css';
 import {useEffect, useState} from "react";
-import githubLogo from "../logos/githubLogo.png"
-import blankPfp from "../logos/blankPfp.png"
+import githubLogo from "../assets/logos/githubLogo.png"
+import blankPfp from "../assets/logos/blankPfp.png"
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 

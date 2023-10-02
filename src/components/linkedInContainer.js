@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import "../../App.css";
-import linkedInLogo from "../logos/linkedInLogo.png";
-import blankPfp from "../logos/blankPfp.png"
+import "../App.css";
+import linkedInLogo from "../assets/logos/linkedInLogo.png";
+import blankPfp from "../assets/logos/blankPfp.png"
 
 
 function LinkedInContainer(){
