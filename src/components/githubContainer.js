@@ -1,7 +1,7 @@
-import '../../App.css';
+import '../App.css';
 import {useEffect, useState} from "react";
-import githubLogo from "../logos/githubLogo.png"
-import blankPfp from "../logos/blankPfp.png"
+import githubLogo from "../assets/logos/githubLogo.png"
+import blankPfp from "../assets/logos/blankPfp.png"
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 
@@ -50,19 +50,18 @@ function GithubContainer() {
             .then(result => result.json()
             .then(jsonResult => {
                 setReposInfo(jsonResult);
-                console.log(jsonResult)
             }))
     }, []);
 
     return (
-        <div className="gitWidgetContainer">
-            <div className="gitWidgetLogoContainer">
+        <div className="widgetContainer" id="gitContainer">
+            <div className="logoContainer">
                 <div>
                     <img src={githubLogo} alt="git logo" height={50} width={50}></img>
                 </div>
-                <a className="gitText" href="https://github.com/SlazZzor" target="_blank" rel="noopener noreferrer"> SlazZzor </a>
-                    <img src={isProfileLoaded ? profileInfo["avatar_url"] : blankPfp} alt="git pfp" className="gitImg" height={50} width={50}></img>    
-                </div>
+                <a className="boldText" href="https://github.com/SlazZzor" target="_blank" rel="noopener noreferrer"> SlazZzor </a>
+                    <img src={isProfileLoaded ? profileInfo["avatar_url"] : blankPfp} alt="git pfp" className="roundImg" height={50} width={50}></img>    
+            </div>
             {isProfileLoaded ? renderRepos() : <Skeleton count={5} style={{display: "flex", flex: 2}}/>}
         </div> 
     );

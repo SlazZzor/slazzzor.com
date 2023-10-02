@@ -1,23 +1,36 @@
-import React, { Suspense } from "react";
+import React from "react";
 import "./App.css";
 import blueLogoGif from "./assets/logos/blueSlazzzor.com.gif";
-import Loading from "./assets/modules/loading";
-import GithubContainer from "./assets/modules/githubContainer";
+import { useMediaQuery } from 'react-responsive'
+import GithubContainer from "./components/githubContainer";
+import LinkedInContainer from "./components/linkedInContainer";
+import ContactContainer from "./components/contactContainer";
+import ProjectsContainer from "./components/projectsContainer";
 
 
 function App() {
+  const isDesktopOrLaptop = useMediaQuery({
+    query: '(min-width: 1224px)'
+  })
+  
   return (
-    <Suspense fallback={<Loading />}>
-      <div className="container">
-        <div>
+    <div>
+      <div className="logo">
           <img src={blueLogoGif} alt="slazzzor.com" />
-        </div> 
-        <div className="profilesContainer">
-          <GithubContainer />
-        </div>
       </div>
-    </Suspense>
-      
+      <div className="container" id={isDesktopOrLaptop ? "main" : ""}>
+          <div className={isDesktopOrLaptop ? "profilesContainer" : "mobileProfileContainer"}>
+            <div>
+              <GithubContainer />
+              <LinkedInContainer />
+            </div>
+            <div>
+              <ContactContainer />
+              <ProjectsContainer />
+            </div>
+          </div>
+      </div> 
+    </div>
   );
 }
 

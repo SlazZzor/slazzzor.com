@@ -1,5 +1,5 @@
-import '../../App.css';
-import pinkLogoGif from "../logos/pinkSlazzzor.com.gif";
+import '../App.css';
+import pinkLogoGif from "../assets/logos/pinkSlazzzor.com.gif";
 
 
 function Loading() {
