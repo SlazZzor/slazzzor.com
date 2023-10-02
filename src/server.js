@@ -11,6 +11,18 @@ function normalizeString(str){
     return str.replaceAll("\n", "").split(" ").filter((value) => value !== "").join(" ");
 };
 
+
+function _arrayBufferToBase64( buffer ) {
+    var binary = '';
+    var bytes = new Uint8Array( buffer );
+    var len = bytes.byteLength;
+    for (var i = 0; i < len; i++) {
+        binary += String.fromCharCode( bytes[ i ] );
+    }
+    return btoa( binary );
+};
+
+
 function getInfo(){
     fetch("https://linkedin.com/in/slavik-rozputnii-221a3b261/", {
             headers: {
@@ -30,17 +42,11 @@ function getInfo(){
             const images = [];
             const jobs = [];
             const jobsInfo = [];
-            let profileName = "";
             let contacts = "";
             $('img').each((index, element) => {
                 if (element["attribs"]["alt"] === "Slavik Rozputnii"){
                     images.push((element["attribs"]["data-delayed-url"]));
                 };
-            });
-            $('h1').each((index, element) => {
-                if (element["attribs"]["class"] === "top-card-layout__title font-sans text-lg papabear:text-xl font-bold leading-open text-color-text mb-0"){
-                    profileName = normalizeString(element["children"][0]["data"]);
-                }
             });
             $('span').each((index, element) => {
                 if (element["attribs"]["class"] === "top-card__subline-item top-card__subline-item--bullet"){
@@ -76,7 +82,6 @@ function getInfo(){
             };
             profileInfo = {
                 images: images,
-                profileName: profileName,
                 contacts: contacts, 
                 jobsInfo: jobsInfo
             };
@@ -117,6 +122,7 @@ app.get('/getProfilePhoto', (req, res) => {
                     }))
     }
 });
+
         
 app.listen(port);
 console.log('Server started');
