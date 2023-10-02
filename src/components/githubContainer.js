@@ -55,7 +55,7 @@ function GithubContainer() {
     }, []);
 
     return (
-        <div className="gitWidgetContainer">
+        <div className="widgetContainer" id="gitContainer">
             <div className="logoContainer">
                 <div>
                     <img src={githubLogo} alt="git logo" height={50} width={50}></img>

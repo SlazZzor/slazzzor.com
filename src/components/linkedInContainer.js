@@ -25,7 +25,7 @@ function LinkedInContainer(){
 
 
     return (
-        <div className="linkedInWidgetContainer"> 
+        <div className="widgetContainer" id="linkedInContainer"> 
             <div className="logoContainer">
                 <img src={linkedInLogo} height={50} alt="LinkedIn logo"></img>
                 <a href="https://www.linkedin.com/in/slavik-rozputnii-221a3b261/" target="_blank" rel="noopener noreferrer" className="boldText">Slavik Rozputnii</a>
