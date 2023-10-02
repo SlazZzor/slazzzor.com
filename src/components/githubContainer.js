@@ -62,7 +62,7 @@ function GithubContainer() {
                 </div>
                 <a className="boldText" href="https://github.com/SlazZzor" target="_blank" rel="noopener noreferrer"> SlazZzor </a>
                     <img src={isProfileLoaded ? profileInfo["avatar_url"] : blankPfp} alt="git pfp" className="roundImg" height={50} width={50}></img>    
-                </div>
+            </div>
             {isProfileLoaded ? renderRepos() : <Skeleton count={5} style={{display: "flex", flex: 2}}/>}
         </div> 
     );

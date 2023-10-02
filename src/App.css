@@ -4,6 +4,10 @@
     flex-direction: column;
 }
 
+#main {
+    justify-content: center;
+}
+
 .loading {
     position: absolute;
     top: 50%;
@@ -13,7 +17,15 @@
 
 .profilesContainer {
     display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.profilesContainer > div {
+    display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
     gap: 5px;
 }
 
@@ -37,6 +49,10 @@
 
 #gitContainer {
     border-color: rgb(158, 97, 214);
+}
+
+#contactContainer {
+    border-color: rgb(217, 17, 191);
 }
 
 .gitRepositories {
