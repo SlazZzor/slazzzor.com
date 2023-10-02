@@ -28,6 +28,7 @@
 .profilesContainer {
     display: flex;
     flex-direction: column;
+    gap: 5px;
 }
 
 .profilesContainer > div {
@@ -35,6 +36,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    gap: 5px;
 }
 
 .mobileProfileContainer {
