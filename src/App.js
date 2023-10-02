@@ -1,31 +1,31 @@
-import React, { Suspense } from "react";
+import React from "react";
 import "./App.css";
 import blueLogoGif from "./assets/logos/blueSlazzzor.com.gif";
-import Loading from "./components/loading";
 import GithubContainer from "./components/githubContainer";
 import LinkedInContainer from "./components/linkedInContainer";
 import ContactContainer from "./components/contactContainer";
+import ProjectsContainer from "./components/projectsContainer";
 
 
 function App() {
   return (
-    <Suspense fallback={<Loading />}>
-      <div className="container" id="main">
-        <div>
+    <div>
+      <div className="logo">
           <img src={blueLogoGif} alt="slazzzor.com" />
-        </div> 
-        <div className="profilesContainer">
-          <div >
-            <GithubContainer />
-            <LinkedInContainer />
-          </div>
-          <div>
-            <ContactContainer />
-          </div>
-        </div>
       </div>
-    </Suspense>
-      
+      <div className="container" id="main">
+          <div className="profilesContainer">
+            <div >
+              <GithubContainer />
+              <LinkedInContainer />
+            </div>
+            <div>
+              <ContactContainer />
+              <ProjectsContainer />
+            </div>
+          </div>
+      </div> 
+    </div>
   );
 }
 

@@ -5,6 +5,16 @@
 }
 
 #main {
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    bottom: 0; 
+    left: 0;
+    justify-content: center;
+}
+
+.logo {
+    display: flex;
     justify-content: center;
 }
 
@@ -53,6 +63,10 @@
 
 #contactContainer {
     border-color: rgb(217, 17, 191);
+}
+
+#projectsContainer {
+    border-color: rgb(196, 15, 15);
 }
 
 .gitRepositories {
