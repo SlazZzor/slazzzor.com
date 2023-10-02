@@ -56,12 +56,12 @@ function GithubContainer() {
 
     return (
         <div className="gitWidgetContainer">
-            <div className="gitWidgetLogoContainer">
+            <div className="logoContainer">
                 <div>
                     <img src={githubLogo} alt="git logo" height={50} width={50}></img>
                 </div>
-                <a className="gitText" href="https://github.com/SlazZzor" target="_blank" rel="noopener noreferrer"> SlazZzor </a>
-                    <img src={isProfileLoaded ? profileInfo["avatar_url"] : blankPfp} alt="git pfp" className="gitImg" height={50} width={50}></img>    
+                <a className="boldText" href="https://github.com/SlazZzor" target="_blank" rel="noopener noreferrer"> SlazZzor </a>
+                    <img src={isProfileLoaded ? profileInfo["avatar_url"] : blankPfp} alt="git pfp" className="roundImg" height={50} width={50}></img>    
                 </div>
             {isProfileLoaded ? renderRepos() : <Skeleton count={5} style={{display: "flex", flex: 2}}/>}
         </div> 

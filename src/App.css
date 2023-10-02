@@ -45,13 +45,6 @@
     border-color: rgb(158, 97, 214);
 }
 
-.gitWidgetLogoContainer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
 .gitRepositories {
     display: flex;
     flex-direction: row;
@@ -72,28 +65,31 @@
     gap: 5px;
 }
 
-.gitRepoContainer {
+.gitRepoText {
+    text-decoration: none; 
+    font-size: 15px;
+    color: black;
+}
+
+.logoContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.infoContainer {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 100%;
 }
 
-.gitImg {
-    border-radius: 50%;
-}
-
-.gitText {
+.boldText {
     font-size: 17px;
     color: black;
     text-decoration: none;
     font-weight: bold;
-}
-
-.gitRepoText {
-    text-decoration: none; 
-    font-size: 15px;
-    color: black;
 }
 
 .descriptionText {
@@ -101,5 +97,9 @@
     text-align: center;
     font-size: 13px;
     color: black;
+}
+
+.roundImg {
+    border-radius: 50%;
 }
 
