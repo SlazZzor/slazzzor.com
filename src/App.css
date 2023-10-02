@@ -28,7 +28,6 @@
 .profilesContainer {
     display: flex;
     flex-direction: column;
-    gap: 5px;
 }
 
 .profilesContainer > div {
@@ -36,8 +35,20 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 5px;
 }
+
+.mobileProfileContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; 
+}
+
+.mobileProfileContainer > div{
+    display: flex;
+    flex-direction: column;
+    gap: 25px; 
+}
+
 
 .widgetContainer {
     display: flex;
@@ -125,5 +136,10 @@
 
 .roundImg {
     border-radius: 50%;
+}
+
+#gap {
+    display: flex;
+    gap: 10px;
 }
 
